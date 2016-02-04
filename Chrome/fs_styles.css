@@ -1,0 +1,78 @@
+#raiting_video {
+	height: 40px;	
+}
+#IMDb_Rating a {
+    border: none;
+	color: #4d4d4d;
+	text-decoration: none;
+}
+#IMDb_Rating a:hover {
+    border: none;
+	color: #4d4d4d;
+	    text-decoration: none;
+}
+/* Блок рейтинга*/
+#raiting_video #raiting { 
+	position:relative;
+	height:9.5px;
+	width:102x;
+	float:left
+} 
+#raiting_video #icon_imdb {
+	float: left;
+	height: 29px;
+	width: 51px;
+	background:url(chrome-extension://__MSG_@@extension_id__/images/imdb.png) 0px -11px;
+	background-size: 100%;
+}
+#raiting_video #raiting_blank, #raiting_video #raiting_votes {
+	height:9.5px;
+	position:absolute
+}
+/* "Чистые" звездочки */
+#raiting_video #raiting_blank {
+	background:url(chrome-extension://__MSG_@@extension_id__/images/ratings.png);
+	width:102px;
+} 
+/*  Закрашенные звездочки */
+#raiting_video #raiting_votes {
+	background:url(chrome-extension://__MSG_@@extension_id__/images/ratings.png) 0 -9.5px;
+} 
+#raiting_video #raiting_star {
+	width: 102px;	
+}
+#raiting_video #info {
+	height: 29px;
+	width: 51px;
+	margin-left: 51px;
+}
+#raiting_video #score {
+	height: 18px;
+	font-size: 17px;
+	text-align: right;
+}
+#raiting_video #votes {
+	height: 11px;
+	font-size: 10px;
+	text-align: right;
+}
+#raiting_video #score #score_icon {
+	height: 10px;
+	width: 10px;
+	margin-top: 4px;
+	margin-left: 2px;
+	background:url(chrome-extension://__MSG_@@extension_id__/images/man.png);
+	background-size: 100%;
+}
+#raiting_video #votes #score_icon {
+	height: 7px;
+	width: 7px;
+	margin-top: 1.5px;
+	margin-left: 2px;
+	background:url(chrome-extension://__MSG_@@extension_id__/images/topic.png);
+	background-size: 100%;
+}
+#raiting_video #score_icon {
+	float: right;
+
+}
