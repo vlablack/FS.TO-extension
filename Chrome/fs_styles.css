@@ -15,7 +15,7 @@
 #raiting_video #raiting { 
 	position:relative;
 	height:9.5px;
-	width:102x;
+	width:102px;
 	float:left
 } 
 #raiting_video #icon_imdb {
@@ -74,5 +74,4 @@
 }
 #raiting_video #score_icon {
 	float: right;
-
 }

@@ -1,18 +1,23 @@
 {
   "manifest_version": 2,
-
   "name": "Рейтинг фильмов IMDb",
   "description": "Позволяет отображать рейтинг фильмов и сериалов на сайте FS.to",
   "version": "1.0",
-
   "content_scripts": [
     {
-      "matches": ["*://fs.to/video*"],
-      "js": ["jquery.min.js", "fs_inject.js"],
-      "css": ["fs_styles.css"]
+      "matches": [
+        "*://fs.to/video*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "fs_inject.js"
+      ],
+      "css": [
+        "fs_styles.css"
+      ]
     }
   ],
-	"web_accessible_resources": [
-		"images/*"
-	]
+  "web_accessible_resources": [
+    "images/*"
+  ]
 }
