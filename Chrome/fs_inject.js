@@ -1,9 +1,10 @@
 $(document).ready(function() {
 
-	$('.item-info tr:last').after("<tr><td></td><td><div id='IMDb_Rating' class='kp_imdb_rating'></div><div class='kp_imdb_rating' id='KP_Rating'></div></td></tr>");
+	$('.item-info tr:last').after("<tr><td></td><td><table><tr><td><div id='IMDb_Rating' class='kp_imdb_rating'></div></td><td><div class='kp_imdb_rating' id='KP_Rating'></div></td></tr></table></td></tr>");
 	var movie_title = $(".b-tab-item__title-origin").html();
 	var movie_year = $('.item-info tr').eq(1).find("td").eq(1).text();
-	movie_year = movie_year.split(' ').join('');
+
+	movie_year = movie_year.trim().split(' ')[0];/*movie_year.split(' ').join('');*/
 	movie_year = movie_year.split("–")[0];
 	movie_year = movie_year.replace( /^\D+/g, '');
 	console.log(movie_year);

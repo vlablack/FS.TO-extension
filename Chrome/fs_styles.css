@@ -3,10 +3,6 @@
     width: 102px;
 }
 
-#IMDb_Rating {
-    float: left;
-}
-
 #IMDb_Rating a {
     border: none;
     color: #4d4d4d;
@@ -102,9 +98,6 @@
 }
 
 /* Стили для рейтинга кинопоиска */
-#KP_Rating {
-    margin-left: 120px;
-}
 
 #rating_kp {
     height: 40px;
