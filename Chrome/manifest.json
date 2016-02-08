@@ -9,8 +9,10 @@
         "*://fs.to/video*"
       ],
       "js": [
-        "jquery.min.js",
-        "fs_inject.js"
+        "lib/jquery.min.js",
+        "fs_inject.js",
+        "src/IMDb.rating.js",
+        "src/kp.rating.js"
       ],
       "css": [
         "fs_styles.css"
