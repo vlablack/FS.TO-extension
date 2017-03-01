@@ -1,5 +1,22 @@
+
+#IMDb_Rating, #KP_Rating {
+    border: none;
+    display: block;
+    font: normal;
+    height: auto;
+    letter-spacing: normal;
+    line-height: normal;
+    margin: 0 0 5px 0;
+    padding: 0;
+    text-transform: normal;
+    visibility: visible;
+    width: auto;
+    word-spacing: normal;
+    z-index: auto;
+}
+
 #raiting_video {
-    height: 40px;
+    height: 42px;
     width: 102px;
 }
 
@@ -31,9 +48,9 @@
 
 #raiting_video #icon_imdb {
     float: left;
-    height: 29px;
+    height: 31px;
     width: 51px;
-    background: url(chrome-extension://__MSG_@@extension_id__/images/imdb.png) 0px -11px;
+    background: url(chrome-extension://__MSG_@@extension_id__/images/imdb.png) 0 -11px;
     background-size: 100%;
 }
 
@@ -44,13 +61,13 @@
 
 /* "Чистые" звездочки */
 #raiting_video #raiting_blank {
-    background: url(chrome-extension://__MSG_@@extension_id__/images/ratings.png);
+    background: url(chrome-extension://__MSG_@@extension_id__/images/starfull_2.png);
     width: 102px;
 }
 
 /*  Закрашенные звездочки */
 #raiting_video #raiting_votes {
-    background: url(chrome-extension://__MSG_@@extension_id__/images/ratings.png) 0 -9.5px;
+    background: url(chrome-extension://__MSG_@@extension_id__/images/starfull_2.png) 0 -9.5px;
 }
 
 #raiting_video #raiting_star {
@@ -102,10 +119,7 @@
 #rating_kp {
     height: 40px;
     width: 102px;
-    background: url(chrome-extension://__MSG_@@extension_id__/images/kino.png);
-    background-repeat: no-repeat;
-    background-position: 80px 18px;
-    background-color: rgba(204, 204, 204, 0.25);
+    background: rgba(204, 204, 204, 0.25) url(chrome-extension://__MSG_@@extension_id__/images/kino.png) no-repeat 80px 18px;
 }
 
 #rating_kp #icon_kp {

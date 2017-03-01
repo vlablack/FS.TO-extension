@@ -1,18 +1,25 @@
 {
   "manifest_version": 2,
-  "name": "Рейтинг фильмов IMDb",
+  "name": "Рейтинг фильмов IMDb и Кинопоиск",
   "description": "Позволяет отображать рейтинг фильмов и сериалов на сайте FS.to",
-  "version": "1.0",
+  "version": "1.1",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "ui/main.html"
+  },
   "content_scripts": [
     {
       "matches": [
-        "*://fs.to/video*"
+        "*://fs.to/video*",
+        "*://megogo.net/ru/view/*"
       ],
       "js": [
         "lib/jquery.min.js",
+        "lib/bootstrap/js/material.min.js",
         "fs_inject.js",
-        "src/IMDb.rating.js",
-        "src/kp.rating.js"
+        "src/AbstractRating.js",
+        "src/LoadIMDbRating.js",
+        "src/loadKPRating.js"
       ],
       "css": [
         "fs_styles.css"
