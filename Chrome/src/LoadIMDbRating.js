@@ -31,7 +31,8 @@ function loadIMDbRating(movie_title, movie_year) {
 		return "http://www.imdb.com/title/";
 	};
 	IMDbRating.prototype.beforeRender = function (content) {
-		var star_width = this.Rating * 10.2;
+		console.log("Rating: " + this.Rating);
+		var star_width = this.Rating * 107 / 10;
 		content.find('#raiting_votes').width(star_width);
 	};
 

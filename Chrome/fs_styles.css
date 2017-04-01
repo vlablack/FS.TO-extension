@@ -17,7 +17,7 @@
 
 #raiting_video {
     height: 42px;
-    width: 102px;
+    width: 107px;
 }
 
 #IMDb_Rating a {
@@ -42,7 +42,7 @@
 #raiting_video #raiting {
     position: relative;
     height: 9.5px;
-    width: 102px;
+    width: 107px;
     float: left
 }
 
@@ -62,7 +62,7 @@
 /* "Чистые" звездочки */
 #raiting_video #raiting_blank {
     background: url(chrome-extension://__MSG_@@extension_id__/images/starfull_2.png);
-    width: 102px;
+    width: 107px;
 }
 
 /*  Закрашенные звездочки */

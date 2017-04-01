@@ -11,6 +11,7 @@
     {
       "matches": [
         "*://fs.to/video*",
+		"*://fs.life/video*",
         "*://megogo.net/ru/view/*"
       ],
       "js": [

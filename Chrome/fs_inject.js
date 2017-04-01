@@ -1,8 +1,9 @@
 $(document).ready(function() {
 
     var movie_year, movie_title;
-
+	console.log('works');
 	if (isFSTO()) {
+		console.log('it is FS');
         $('.item-info tr:last').after("<tr><td></td><td><table><tr><td><div id='IMDb_Rating' class='kp_imdb_rating'></div></td><td><div class='kp_imdb_rating' id='KP_Rating'></div></td></tr></table></td></tr>");
 
         movie_year = getMovieYear();
@@ -26,7 +27,7 @@ function isMegogo() {
 
 function isFSTO() {
     var href = window.location.href;
-    return href.indexOf("://fs.to/video") > -1;
+    return href.indexOf("://fs.to/video") > -1 || href.indexOf("://fs.life/video") > -1;
 }
 
 function getMovieTitleMegogo() {
