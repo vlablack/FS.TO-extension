@@ -49,6 +49,8 @@ function loadIMDbRating(movie_title, movie_year) {
 			if (!result["Error"]) {
 				var imdb = new IMDbRating(result["imdbID"], result["imdbRating"], result["imdbVotes"]);
 				$("#IMDb_Rating").append(imdb.render());
+				console.log(result["Poster"]);
+				$("a.images-show img").attr('src', result["Poster"]);
 			}
 		}
 	});
