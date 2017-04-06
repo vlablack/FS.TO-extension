@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     var movie_year, movie_title;
 	console.log('works');
 	if (isFSTO()) {
@@ -9,14 +8,13 @@ $(document).ready(function() {
         movie_year = getMovieYear();
         movie_title = getMovieTitleForIMDB();
     } else if (isMegogo()) {
-        $('.info_rating .infoi__content').html("<div id='KP_Rating'></div>\
-        										<div id='IMDb_Rating'></div>");
+        $('.info_rating .infoi__content').html("<div id='KP_Rating'></div><div id='IMDb_Rating'></div>");
         movie_year = getMovieYearMegogo();
         movie_title = getMovieTitleMegogo();
     }
 
 	loadIMDbRating(movie_title, movie_year);
-	loadKPRating(movie_title, movie_year);
+	//loadKPRating(movie_title, movie_year);
 
 });
 
@@ -50,7 +48,7 @@ function getMovieTitleForIMDB() {
 	if (!movie_title) {
 		movie_title = $(".b-tab-item__title-inner").find("span[itemprop='name']").html();
 	}
-	movie_title = movie_title.trim().split("/").clean(undefined).join(" ");
+	movie_title = movie_title.trim().split("/").clean(undefined).join(" ").replace(/[^a-zA-Z0-9\s]+/g, "");
 	return movie_title;
 }
 
@@ -65,7 +63,7 @@ function getMovieYear() {
 
 Array.prototype.clean = function(deleteValue) {
 	for (var i = 0; i < this.length; i++) {
-		if (this[i] == deleteValue) {
+		if (this[i] === deleteValue) {
 			this.splice(i, 1);
 			i--;
 		}
@@ -75,17 +73,17 @@ Array.prototype.clean = function(deleteValue) {
 
 
 function getCurrentDate() {
-	var today = new Date();
-	var dd = today.getDate();
-	var mm = today.getMonth()+1; //January is 0!
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
 
-	var yyyy = today.getFullYear();
-	if(dd<10){
-		dd='0'+dd
-	}
-	if(mm<10){
-		mm='0'+mm
-	}
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+        dd = '0' + dd
+    }
+    if (mm < 10) {
+        mm = '0' + mm
+    }
 
-	return dd+'.'+mm+'.'+yyyy;
+    return dd + '.' + mm + '.' + yyyy;
 }

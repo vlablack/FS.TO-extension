@@ -8,8 +8,8 @@ function AbstractRating(id, rating, votes) {
 
     this.render = function () {
         var content = $(this.getHtmlContent());
-        content.find("#score").find("#value").html(this.Rating);
-        content.find("#votes").find("#value").html(this.Votes);
+        content.find(".score .value").html(this.Rating);
+        content.find(".votes .value").html(this.Votes);
 
         var result = jQuery("<a target='_blank'></a>").attr("href", this.getUri() + this.imdbID);
         result.append(content);

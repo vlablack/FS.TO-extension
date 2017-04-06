@@ -6,14 +6,14 @@ function loadKPRating(movie_title, movie_year) {
     KPRating.prototype = Object.create(AbstractRating.prototype);
     KPRating.prototype.constructor = KPRating;
     KPRating.prototype.getHtmlContent = function () {
-        return "<div id=\"rating_kp\"> \
-							<div id=\"icon_kp\"></div> \
-							<div id=\"info_kp\"> \
-								<span id=\"score\"> \
-									<span id=\"value\">10.4</span> \
+        return "<div class=\"rating_kp\"> \
+							<div class=\"icon_kp\"></div> \
+							<div class=\"info_kp\"> \
+								<span class=\"score\"> \
+									<span class=\"value\">10.4</span> \
 								</span> \
-								<span id=\"votes\"> \
-									<span id=\"value\">496,762</span>\
+								<span class=\"votes\"> \
+									<span class=\"value\">496,762</span>\
 								</span> \
 							</div> \
 						</div>";
